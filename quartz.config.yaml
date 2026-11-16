@@ -6,7 +6,7 @@ configuration:
   enablePopovers: true
   prefetch: viewport
   locale: ko-KR
-  baseUrl: deanfeedme.github.io
+  baseUrl: deanfeed.me
   ignorePatterns:
     - private
     - templates
@@ -192,7 +192,7 @@ plugins:
     enabled: true
     options:
       links:
-        deanfeed: https://deanfeedme.github.io
+        deanfeed: https://deanfeed.me
         GitHub: https://github.com/deanfeedme/deanfeedme.github.io
     layout:
       position: footer
