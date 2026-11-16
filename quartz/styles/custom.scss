@@ -1,3 +1,35 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+/* ── deanfeed: 플러그인과 같은 글꼴·팔레트·내비 ── */
+@font-face { font-family: "NanumSquare Neo"; font-weight: 300; font-display: swap; src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-aLt.woff) format("woff"); }
+@font-face { font-family: "NanumSquare Neo"; font-weight: 400; font-display: swap; src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.woff) format("woff"); }
+@font-face { font-family: "NanumSquare Neo"; font-weight: 700; font-display: swap; src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-cBd.woff) format("woff"); }
+@font-face { font-family: "NanumSquare Neo"; font-weight: 800; font-display: swap; src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-dEb.woff) format("woff"); }
+
+body { -webkit-font-smoothing: antialiased; }
+
+/* 전체 폭 틀 안에서 글 폭은 읽기 좋게 */
+.page[data-frame="full-width"] > #quartz-body .center.full-width { max-width: 760px; min-width: 0; margin: 0 auto; padding: 0 16px; }
+
+/* 머리줄: 내비 + 검색 + 다크 모드 */
+.page-header header { position: sticky; top: 0; z-index: 20; display: flex; align-items: center; gap: 8px; padding: 10px 0; margin: 0 0 8px; background: color-mix(in srgb, var(--light) 92%, transparent); backdrop-filter: saturate(1.4) blur(12px); border-bottom: 1px solid var(--lightgray); }
+.df-site-nav { display: flex; align-items: center; gap: 8px; flex: 1; min-width: 0; }
+.df-site-logo { display: inline-flex; align-items: center; gap: 8px; color: var(--darkgray) !important; text-decoration: none; background: none !important; margin-right: auto; }
+.df-site-logo img { width: 26px; height: 26px; border-radius: 50%; margin: 0; }
+.df-site-word { font-size: 19px; font-weight: 800; letter-spacing: -0.02em; }
+.df-site-word span { font-weight: 300; }
+.df-site-links { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; }
+.df-site-links a { padding: 6px 9px; border-radius: 10px; font-size: 14.5px; font-weight: 600; color: var(--gray) !important; background: none !important; white-space: nowrap; }
+.df-site-links a:hover { background: var(--highlight) !important; color: var(--darkgray) !important; }
+@media all and (max-width: 760px) { .df-site-links { display: none; } }
+
+/* 홈: deanfeed 앱이 화면 전체를 차지하므로 Quartz 틀은 숨김 */
+body[data-slug="index"] .page-header, body[data-slug="index"] .page-footer, body[data-slug="index"] footer, body[data-slug="index"] #quartz-body > .center > hr { display: none; }
+
+/* 아티클 (토스피드식 본문) */
+.df-article .df-article-sub { font-size: 19px; color: var(--gray); margin-top: -0.4em; }
+article.df-article, article.df-permanent, article.df-memo { font-size: 17px; line-height: 1.85; }
+article.df-article h2 { font-size: 23px; margin-top: 2em; }
+article img, article video { max-width: 100%; border-radius: 15px; }
+.df-cite { font-size: 13px; color: var(--gray); }
+h1.article-title { font-size: 34px; font-weight: 800; letter-spacing: -0.03em; line-height: 1.3; }
