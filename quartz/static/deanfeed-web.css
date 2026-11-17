@@ -617,10 +617,17 @@
 :is(.df-root, #df-layer) .df-map-selbar{ display: flex; flex-direction: column; gap: 8px; padding: 12px; border-radius: var(--radius-m); background: var(--color-accent-soft); }
 :is(.df-root, #df-layer) .df-notes-panel{ display: flex; flex-direction: column; gap: 14px; }
 :is(.df-root, #df-layer) .df-note-group{ display: flex; flex-direction: column; gap: 6px; }
-:is(.df-root, #df-layer) .df-note-mini{ display: flex; flex-direction: column; gap: 6px; padding: 12px; border-radius: var(--radius-m); border: 1px solid var(--divider-color); background: var(--background-primary); text-align: left; }
+:is(.df-root, #df-layer) .df-note-mini{ display: flex; flex-direction: column; align-items: stretch; gap: 6px; width: 100%; min-width: 0; height: auto; padding: 12px; border-radius: var(--radius-m); border: 1px solid var(--divider-color); background: var(--background-primary); text-align: left; white-space: normal; overflow-wrap: anywhere; }
 :is(.df-root, #df-layer) .df-note-mini:hover{ border-color: var(--background-modifier-border-hover); }
+:is(.df-root, #df-layer) .df-note-mini{ cursor: pointer; }
+:is(.df-root, #df-layer) .df-note-mini:focus-visible{ outline: 2px solid var(--background-modifier-border-focus); outline-offset: 1px; }
+:is(.df-root, #df-layer) .df-note-mini-body{ font-size: 13.5px; line-height: 1.6; color: var(--text-normal); }
+:is(.df-root, #df-layer) .df-note-mini-body > :first-child{ margin-top: 0; }
+:is(.df-root, #df-layer) .df-note-mini-body > :last-child{ margin-bottom: 0; }
+:is(.df-root, #df-layer) .df-note-mini-body p{ margin: 0 0 .5em; font-size: inherit; color: inherit; }
+:is(.df-root, #df-layer) .df-note-mini .df-note-mini-body blockquote{ border-left: 2px solid var(--background-modifier-border-hover); border-radius: 0; background: none; padding: 0 0 0 10px; color: var(--text-muted); margin: .4em 0; font-size: inherit; }
 :is(.df-root, #df-layer) .df-note-mini p{ margin: 0; font-size: 13px; color: var(--text-muted); line-height: 1.5; }
-:is(.df-root, #df-layer) .df-note-mini blockquote, :is(.df-root, #df-layer) .df-quote{ margin: 0; padding: 6px 10px; border-left: 3px solid var(--color-yellow); background: var(--background-modifier-hover); border-radius: 0 6px 6px 0; font-size: 13.5px; line-height: 1.55; color: var(--text-normal); }
+:is(.df-root, #df-layer) .df-note-mini blockquote, :is(.df-root, #df-layer) .df-quote{ margin: 0; min-width: 0; white-space: normal; overflow-wrap: anywhere; padding: 6px 10px; border-left: 3px solid var(--color-yellow); background: var(--background-modifier-hover); border-radius: 0 6px 6px 0; font-size: 13.5px; line-height: 1.55; color: var(--text-normal); }
 :is(.df-root, #df-layer) .df-hl-row{ display: flex; align-items: center; gap: 8px; font-size: 13px; }
 :is(.df-root, #df-layer) .df-hl-swatch{ width: 10px; height: 10px; border-radius: 3px; flex: none; }
 :is(.df-root, #df-layer) .df-hl-text{ flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -678,6 +685,11 @@
 :is(.df-root, #df-layer) .df-note-card.is-picked{ border-color: var(--color-accent); box-shadow: 0 0 0 2px var(--color-accent-soft); }
 :is(.df-root, #df-layer) .df-note-card-top{ flex-wrap: nowrap; gap: 8px; }
 :is(.df-root, #df-layer) .df-note-excerpt{ font-size: 14px; line-height: 1.65; max-height: 9.5em; overflow: hidden; -webkit-mask-image: linear-gradient(#000 70%, transparent); mask-image: linear-gradient(#000 70%, transparent); }
+:is(.df-root, #df-layer) .df-note-excerpt.is-full{ max-height: none; overflow: visible; -webkit-mask-image: none; mask-image: none; }
+:is(.df-root, #df-layer) .df-note-excerpt blockquote, :is(.df-root, #df-layer) .df-note-excerpt blockquote p{ font-size: inherit; line-height: inherit; }
+:is(.df-root, #df-layer) .df-note-excerpt blockquote{ margin: .4em 0; }
+:is(.df-root, #df-layer) .df-note-excerpt > :first-child{ margin-top: 0; }
+:is(.df-root, #df-layer) .df-note-excerpt > :last-child{ margin-bottom: 0; }
 :is(.df-root, #df-layer) .df-note-cite{ margin: 0; font-size: 11.5px; color: var(--text-faint); line-height: 1.5; }
 :is(.df-root, #df-layer) .kind-chip-literature{ background: color-mix(in srgb, var(--color-blue) 15%, transparent); color: var(--color-blue); }
 :is(.df-root, #df-layer) .kind-chip-highlight{ background: color-mix(in srgb, var(--color-yellow) 30%, transparent); color: color-mix(in srgb, var(--color-yellow) 45%, var(--text-normal)); }
