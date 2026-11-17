@@ -4248,15 +4248,14 @@ svg.svg-icon[class*="deanfeed-mark"] {
 
 /* ═════ styles/web.css ═════ */
 /* deanfeed 웹 — 홈페이지에서만 쓰는 스타일 (플러그인 빌드에는 들어가지 않음)
-   1) Obsidian 변수 대신 볼트 테마(Claude 팔레트) 값  2) 나눔스퀘어 네오 웹폰트  3) 읽기 전용에서 편집 도구 숨김 */
-@font-face { font-family: "NanumSquare Neo"; font-weight: 300; font-display: swap; src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-aLt.woff) format("woff"); }
-@font-face { font-family: "NanumSquare Neo"; font-weight: 400; font-display: swap; src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.woff) format("woff"); }
-@font-face { font-family: "NanumSquare Neo"; font-weight: 700; font-display: swap; src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-cBd.woff) format("woff"); }
-@font-face { font-family: "NanumSquare Neo"; font-weight: 800; font-display: swap; src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-dEb.woff) format("woff"); }
-@font-face { font-family: "NanumSquare Neo"; font-weight: 900; font-display: swap; src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-eHv.woff) format("woff"); }
+   1) Obsidian 변수 대신 볼트 테마(Claude 팔레트) 값  2) 나눔스퀘어라운드 웹폰트 (볼트와 같은 글꼴)  3) 읽기 전용에서 편집 도구 숨김 */
+@font-face { font-family: "NanumSquareRound"; font-weight: 300; font-display: swap; src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareRound/NanumSquareRoundL.woff2) format("woff2"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareRound/NanumSquareRoundL.woff) format("woff"); }
+@font-face { font-family: "NanumSquareRound"; font-weight: 400; font-display: swap; src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareRound/NanumSquareRoundR.woff2) format("woff2"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareRound/NanumSquareRoundR.woff) format("woff"); }
+@font-face { font-family: "NanumSquareRound"; font-weight: 700; font-display: swap; src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareRound/NanumSquareRoundB.woff2) format("woff2"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareRound/NanumSquareRoundB.woff) format("woff"); }
+@font-face { font-family: "NanumSquareRound"; font-weight: 800; font-display: swap; src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareRound/NanumSquareRoundEB.woff2) format("woff2"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareRound/NanumSquareRoundEB.woff) format("woff"); }
 
 :root {
-  --font-interface: "NanumSquare Neo", -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  --font-interface: "NanumSquareRound", -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
   --font-text: var(--font-interface);
   --font-monospace: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
   --font-ui-smaller: 12px; --font-ui-small: 13px; --font-ui-medium: 15px; --font-text-size: 16px;

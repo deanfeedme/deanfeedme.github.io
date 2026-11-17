@@ -15,8 +15,8 @@ configuration:
     fontOrigin: local
     cdnCaching: true
     typography:
-      header: NanumSquare Neo
-      body: NanumSquare Neo
+      header: NanumSquareRound
+      body: NanumSquareRound
       code: SF Mono
     colors:
       lightMode:
