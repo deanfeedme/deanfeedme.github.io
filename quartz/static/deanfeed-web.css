@@ -1351,10 +1351,12 @@
 ) { display: none !important; }
 /* 데이터를 바꾸는 조작은 눌러도 반응하지 않게 */
 .df-readonly :is(
-  .df-check, .df-range, #habits button.df-grass-cell, .df-month-cell, .df-week-col, .df-pagemap, .df-map-tools, .df-stepper, .df-cat-num,
+  .df-check, .df-range, #habits button.df-grass-cell, .df-month-cell, .df-week-col, .df-pagemap, .df-stepper, .df-cat-num,
   .df-th-actions button, .df-plan, .df-star, .df-cart .df-item, .df-wlog-meta, .df-stage-work, .df-bones .df-bone,
   .df-modal-body :is(input, textarea, select, .df-picker-btn, .df-seg, .df-tag-input, .df-select-btn, .df-dow-pick, .df-related-pick, .df-type-tiles, .df-role-pick, .df-word-line)
 ) { pointer-events: none; }
 .df-readonly :is(.df-month-cell .df-ev-chip, .df-week-col .df-ev-block) { pointer-events: auto; }
 .df-readonly .df-modal-body :is(input, textarea) { background: transparent; }
 .df-readonly .df-node { cursor: default; }
+/* 텍스트 자료 본문: 하이라이트는 보이기만 */
+.df-readonly .df-hl-mark { cursor: inherit; }
