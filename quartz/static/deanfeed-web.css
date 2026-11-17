@@ -635,6 +635,12 @@
 :is(.df-root, #df-layer) .df-hl-item-text{ font-size: 13.5px; line-height: 1.55; }
 :is(.df-root, #df-layer) .df-hl-item-note{ display: flex; gap: 5px; align-items: flex-start; font-size: 12px; line-height: 1.5; color: var(--text-muted); }
 :is(.df-root, #df-layer) .df-hl-item-note svg{ width: 12px; height: 12px; flex: none; margin-top: 3px; }
+:is(.df-root, #df-layer) .df-hl-note-body{ padding: 0 12px 10px; font-size: 13.5px; line-height: 1.6; color: var(--text-normal); }
+:is(.df-root, #df-layer) .df-hl-note-body > :first-child{ margin-top: 0; }
+:is(.df-root, #df-layer) .df-hl-note-body > :last-child{ margin-bottom: 0; }
+:is(.df-root, #df-layer) .df-hl-note .df-hl-item-text{ color: var(--text-muted); }
+:is(.df-root, #df-layer) .df-hl-note-tags{ padding: 0 12px 10px; gap: 4px; }
+:is(.df-root, #df-layer) .df-mat-web-notes{ max-width: 760px; }
 :is(.df-root, #df-layer) .df-hl-item-actions{ display: flex; align-items: center; justify-content: flex-end; gap: 2px; padding: 0 6px 6px; }
 :is(.df-root, #df-layer) .df-hl-mark.is-flash, :is(.df-root, #df-layer) .df-hl-rect.is-flash{ animation: df-hl-flash 1.5s ease-out; }
 @keyframes df-hl-flash{ 0%, 40% { box-shadow: 0 0 0 3px var(--color-accent); } 100% { box-shadow: 0 0 0 3px transparent; } }
@@ -1351,7 +1357,7 @@
 ) { display: none !important; }
 /* 데이터를 바꾸는 조작은 눌러도 반응하지 않게 */
 .df-readonly :is(
-  .df-check, .df-range, #habits button.df-grass-cell, .df-month-cell, .df-week-col, .df-pagemap, .df-stepper, .df-cat-num,
+  .df-check, .df-range, #habits button.df-grass-cell, .df-month-cell, .df-week-col, .df-pagemap, .df-map-tools, .df-stepper, .df-cat-num,
   .df-th-actions button, .df-plan, .df-star, .df-cart .df-item, .df-wlog-meta, .df-stage-work, .df-bones .df-bone,
   .df-modal-body :is(input, textarea, select, .df-picker-btn, .df-seg, .df-tag-input, .df-select-btn, .df-dow-pick, .df-related-pick, .df-type-tiles, .df-role-pick, .df-word-line)
 ) { pointer-events: none; }
