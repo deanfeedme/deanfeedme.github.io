@@ -595,13 +595,16 @@
 :is(.df-root, #df-layer) .df-para-no{ user-select: none; font-size: 11px; font-weight: 800; color: var(--text-faint); padding-top: 5px; font-variant-numeric: tabular-nums; text-align: right; }
 :is(.df-root, #df-layer) .df-para-body{ font-size: 16.5px; }
 :is(.df-root, #df-layer) .df-hl-mark{ color: inherit; border-radius: 3px; padding: 1px 0; cursor: pointer; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
-:is(.df-root, #df-layer) .df-map-panel{ display: flex; flex-direction: column; gap: 10px; }
+:is(.df-root, #df-layer) .df-map-panel{ display: flex; flex-direction: column; gap: 10px; container: dfmap / inline-size; }
 :is(.df-root, #df-layer) .df-map-tools{ justify-content: space-between; }
 :is(.df-root, #df-layer) .df-map-tools .df-seg{ flex-wrap: wrap; }
-:is(.df-root, #df-layer) .df-pagemap{ display: grid; grid-template-columns: repeat(auto-fill, minmax(34px, 1fr)); gap: 3px; user-select: none; touch-action: none; }
-:is(.df-root, #df-layer) .df-pagemap.dense{ grid-template-columns: repeat(auto-fill, minmax(18px, 1fr)); }
+:is(.df-root, #df-layer) .df-pagemap{ display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 3px; user-select: none; touch-action: none; }
+@container dfmap (min-width: 460px){:is(.df-root, #df-layer) .df-pagemap{ grid-template-columns: repeat(20, minmax(0, 1fr)); }
+ }
+@container dfmap (min-width: 900px){:is(.df-root, #df-layer) .df-pagemap{ grid-template-columns: repeat(30, minmax(0, 1fr)); }
+ }
 :is(.df-root, #df-layer) .df-cell{ --o: 0; position: relative; height: 26px; border: 0; border-radius: 4px; padding: 0; font-size: 9.5px; font-variant-numeric: tabular-nums; color: var(--text-faint); background: color-mix(in srgb, var(--color-accent) calc(var(--o) * 28%), var(--background-modifier-hover)); cursor: pointer; display: inline-grid; place-items: center; }
-:is(.df-root, #df-layer) .df-pagemap.dense .df-cell{ height: 16px; font-size: 0; }
+:is(.df-root, #df-layer) .df-pagemap.dense .df-cell{ height: 18px; font-size: 8.5px; }
 :is(.df-root, #df-layer) .df-cell:hover{ outline: 1.5px solid var(--text-muted); outline-offset: -1px; }
 :is(.df-root, #df-layer) .df-cell.is-read{ background: var(--color-accent); color: #fff; font-weight: 700; }
 :is(.df-root, #df-layer) .df-cell.has-note::after{ content: ""; position: absolute; left: 4px; right: 4px; bottom: 2px; height: 2px; border-radius: 2px; background: var(--interactive-accent); }
