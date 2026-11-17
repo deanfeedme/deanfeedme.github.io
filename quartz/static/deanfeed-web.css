@@ -854,8 +854,8 @@
 
 
 /* lang.css */
-:is(.df-root, #df-layer) .df-stages{ display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; margin-top: -16px; }
-@container df (max-width: 760px){:is(.df-root, #df-layer) .df-stages{ grid-template-columns: repeat(5, minmax(120px, 1fr)); overflow-x: auto; }
+:is(.df-root, #df-layer) .df-stages{ display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 8px; margin-top: -16px; }
+@container df (max-width: 760px){:is(.df-root, #df-layer) .df-stages{ grid-auto-columns: minmax(120px, 1fr); overflow-x: auto; }
  }
 :is(.df-root, #df-layer) .df-stage{ display: flex; align-items: center; gap: 8px; padding: 12px; border-radius: var(--radius-l); border: 1px solid var(--divider-color); background: var(--background-primary-alt); text-align: left; font-size: 13px; }
 :is(.df-root, #df-layer) .df-stage b{ flex: 1; min-width: 0; line-height: 1.3; }
