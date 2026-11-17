@@ -1,9 +1,9 @@
 ---
 title: "동우"
-description: "❤️‍🩹 나는 나를 치료할 의무가 있다."
+description: "나를 치료하는 공간"
 cssclasses: ["df-home"]
 ---
 
 <div id="df-web-root" data-base="/"></div>
-<link rel="stylesheet" href="/static/deanfeed-web.css?v=mwkhg5ge">
-<script src="/static/deanfeed-web.js?v=mwkhg5ge" defer></script>
+<link rel="stylesheet" href="/static/deanfeed-web.css?v=mwko7clo">
+<script src="/static/deanfeed-web.js?v=mwko7clo" defer></script>

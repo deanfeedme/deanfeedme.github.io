@@ -14,13 +14,16 @@ body { -webkit-font-smoothing: antialiased; }
 /* 머리줄: 내비 + 검색 + 다크 모드 */
 .page-header header { position: sticky; top: 0; z-index: 20; display: flex; align-items: center; gap: 8px; padding: 10px 0; margin: 0 0 8px; background: color-mix(in srgb, var(--light) 92%, transparent); backdrop-filter: saturate(1.4) blur(12px); border-bottom: 1px solid var(--lightgray); }
 .df-site-nav { display: flex; align-items: center; gap: 8px; flex: 1; min-width: 0; }
-.df-site-logo { display: inline-flex; align-items: center; gap: 8px; color: var(--darkgray) !important; text-decoration: none; background: none !important; margin-right: auto; }
-.df-site-logo img { width: 26px; height: 26px; border-radius: 50%; margin: 0; }
-.df-site-word { font-size: 19px; font-weight: 800; letter-spacing: -0.02em; }
-.df-site-word span { font-weight: 300; }
+/* 로고: 새 홈과 같은 마크(20px) + dean(굵게) feed(보통) */
+.df-site-logo { display: inline-flex; align-items: center; gap: 5px; height: 20px; color: var(--darkgray) !important; text-decoration: none; background: none !important; margin-right: auto; }
+.df-site-logo img { width: 20px; height: 20px; border-radius: 50%; margin: 0; }
+.df-site-word { font-size: 19px; line-height: 20px; font-weight: 800; letter-spacing: -0.03em; }
+.df-site-word span { margin-left: 3px; font-weight: 400; }
+/* 탭: 새 홈 내비처럼 15px 보통 굵기, 마우스를 올리면 회색 바탕 + 강조색 글자 */
 .df-site-links { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; }
-.df-site-links a { padding: 6px 9px; border-radius: 10px; font-size: 14.5px; font-weight: 600; color: var(--gray) !important; background: none !important; white-space: nowrap; }
-.df-site-links a:hover { background: var(--highlight) !important; color: var(--darkgray) !important; }
+.df-site-links a { padding: 8px 10px; border-radius: 10px; font-size: 15px; line-height: 1.43; font-weight: 400; color: var(--darkgray) !important; background: none !important; white-space: nowrap; transition: background-color .2s ease-in-out, color .2s ease-in-out; }
+.df-site-links a:hover { background: rgba(31, 30, 29, .05) !important; color: var(--secondary) !important; }
+:root[saved-theme="dark"] .df-site-links a:hover { background: rgba(255, 255, 255, .06) !important; }
 @media all and (max-width: 760px) { .df-site-links { display: none; } }
 
 /* 홈: deanfeed 앱이 화면 전체를 차지하므로 Quartz 틀은 숨김 */
