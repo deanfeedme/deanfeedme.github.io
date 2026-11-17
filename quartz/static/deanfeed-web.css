@@ -4000,6 +4000,27 @@ svg.svg-icon[class*="deanfeed-mark"] {
 :is(.df-root, #df-layer) .df-footer{
 	border-top-color: var(--background-modifier-border);
 }
+:is(.df-root, #df-layer) .df-map-canvas > .df-empty{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	border: none;
+	border-radius: 0;
+	background: transparent;
+}
+@container df (min-width: 861px){:is(.df-root, #df-layer) .df-map-top > .df-section-actions{
+		flex: none;
+		flex-wrap: nowrap;
+		width: 300px;
+	}
+:is(.df-root, #df-layer) .df-map-top > .df-section-actions > .df-search-inp{
+		flex: 1;
+		width: auto;
+		min-width: 0;
+	}
+
+}
 
 
 /* feed/plan.css */
