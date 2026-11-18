@@ -1227,9 +1227,11 @@
 	background-color: var(--background-primary);
 }
 
+/* deanfeed next: 프로젝트 제목은 길어도 잘리지 않고 여러 줄로 다 보인다 (원본은 한 줄 + 말줄임).
+   그래서 색 점과 편집 버튼은 가운데가 아니라 제목의 첫 줄에 맞춘다 */
 .dfn-view .dn-pcard__top {
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	gap: 8px;
 	margin: -4px -8px -4px 0;
 }
@@ -1238,20 +1240,27 @@
 	flex: none;
 	width: 10px;
 	height: 10px;
+	/* 제목 한 줄(26px)의 가운데 */
+	margin-top: 8px;
 	border-radius: 50%;
 	background-color: var(--dn-c);
+}
+
+/* 편집 버튼(32px)의 가운데를 제목 첫 줄(26px)의 가운데에 */
+.dfn-view .dn-pcard__top > .dn-icon-btn {
+	margin-top: -3px;
 }
 
 .dfn-view .dn-pcard__name {
 	flex: 1;
 	min-width: 0;
 	margin: 0;
-	overflow: hidden;
 	font-size: 18px;
 	font-weight: 600;
 	line-height: 26px;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+	/* 낱말 단위로 줄을 바꾸되, 띄어쓰기 없는 긴 글자도 카드 밖으로 넘치지 않게 */
+	word-break: keep-all;
+	overflow-wrap: anywhere;
 	color: var(--text-normal);
 }
 
@@ -4634,6 +4643,30 @@
 }
 :is(.dfn-feed, #dfn-layer) .df-thing-totals{
 	margin-top: -8px;
+}
+:is(.dfn-feed, #dfn-layer) .df-thing-sum{
+	display: flex;
+	align-items: baseline;
+	gap: 8px;
+	margin-left: auto;
+}
+:is(.dfn-feed, #dfn-layer) .df-thing-sum span{
+	font-size: 13px;
+	color: var(--text-muted);
+}
+:is(.dfn-feed, #dfn-layer) .df-thing-sum b{
+	font-size: 22px;
+	font-weight: var(--font-semibold);
+	font-variant-numeric: tabular-nums;
+	letter-spacing: -0.01em;
+	color: var(--text-normal);
+}
+:is(.dfn-feed, #dfn-layer) .df-section-title .df-thing-sub{
+	margin-left: 10px;
+	font-size: 14px;
+	font-weight: var(--font-normal);
+	font-variant-numeric: tabular-nums;
+	color: var(--text-muted);
 }
 :is(.dfn-feed, #dfn-layer) .df-habit-summary{
 	display: grid;
