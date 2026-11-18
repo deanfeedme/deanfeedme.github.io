@@ -1098,6 +1098,26 @@
 	display: flex;
 }
 
+/* 아이콘 버튼 (캘린더 · 할일의 이전/다음, 프로젝트 더보기). 아래의 작은 크기(--sm) 규칙보다 앞에 둔다 */
+.dfn-view .dn-icon-btn {
+	--icon-size: 20px;
+	--icon-stroke: 2px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 39px;
+	height: 39px;
+	border-radius: var(--dn-radius);
+	color: var(--icon-color);
+	cursor: pointer;
+	transition: background-color var(--dn-transition);
+}
+
+.dfn-view .dn-icon-btn:hover {
+	background-color: var(--dn-hover-bg);
+	color: var(--icon-color-hover, var(--text-normal));
+}
+
 .dfn-view .dn-icon-btn--sm {
 	--icon-size: 18px;
 	width: 32px;
@@ -2832,26 +2852,6 @@
 	.dfn-view .dn-sec-head:has(> .dn-todo__nav) {
 		flex-wrap: wrap;
 	}
-}
-
-/* 아이콘 버튼 (캘린더 · 할일의 이전/다음, 프로젝트 더보기) */
-.dfn-view .dn-icon-btn {
-	--icon-size: 20px;
-	--icon-stroke: 2px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 39px;
-	height: 39px;
-	border-radius: var(--dn-radius);
-	color: var(--icon-color);
-	cursor: pointer;
-	transition: background-color var(--dn-transition);
-}
-
-.dfn-view .dn-icon-btn:hover {
-	background-color: var(--dn-hover-bg);
-	color: var(--icon-color-hover, var(--text-normal));
 }
 
 
