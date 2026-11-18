@@ -5,5 +5,5 @@ cssclasses: ["df-home"]
 ---
 
 <div id="df-web-root" data-base="/"></div>
-<link rel="stylesheet" href="/static/deanfeed-web.css?v=wtpb16">
-<script src="/static/deanfeed-web.js?v=wtpb16" defer></script>
+<link rel="stylesheet" href="/static/deanfeed-web.css?v=1jr3b0x">
+<script src="/static/deanfeed-web.js?v=1jr3b0x" defer></script>
